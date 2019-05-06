@@ -1,8 +1,9 @@
 import numpy as np
 
+
 def hypothesis(theta, X, n):
-    h = np.ones((X.shape[0],1))
-    theta = theta.reshape(1,n+1)
+    h = np.ones((X.shape[0], 1))
+    theta = theta.reshape(1, n+1)
     for i in range(0,X.shape[0]):
         h[i] = float(np.matmul(theta, X[i]))
     h = h.reshape(X.shape[0])
